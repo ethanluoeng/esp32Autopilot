@@ -1,0 +1,18 @@
+menu "LED Blink Configuration"
+
+    config LED_GPIO
+        int "LED GPIO number"
+        default 48
+        range 0 48
+        help
+            GPIO pin number for the on-board WS2812 LED.
+            Default is 48 for ESP32-S3 DevKitC.
+
+    config BLINK_INTERVAL_MS
+        int "Blink interval in milliseconds"
+        default 500
+        range 50 5000
+        help
+            Half-period for LED blinking. 500 ms produces 1 Hz blink.
+
+endmenu
